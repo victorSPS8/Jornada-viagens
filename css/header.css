@@ -1,0 +1,16 @@
+header {
+  width: 100%;
+  /* Usamos a propriedade width com valor 100% para que o header ocupe toda a largura do container */
+  height: 138px;
+  /* Já que os três headers tem a mesma altura, podemos usar a propriedade height com tamnho fixo (px) */
+  background-color: var(--background-tertiary-color);
+  /* Usamos a variável de cor de fundo terciária para o background do header */
+}
+
+.logo {
+  display: inline-block;
+  /* por ser uma tag Inline, usamos a propriedade display com valor inline-block */
+  width: 68px;
+  height: 64px;
+  margin: 37px 0 0 48px;
+}
