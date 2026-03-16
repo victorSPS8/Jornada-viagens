@@ -72,4 +72,45 @@ nav {
     /* Essa propriedade define a cor do texto dos itens do menu usando a variável de cor de texto secundária */
     text-decoration: none;
     /* Essa propriedade remove o sublinhado dos links */
+    font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 768 pixels */
+    .navegation-menu {
+        /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 768 pixels */
+        margin-top: 0;
+        /* Isso remove a margem superior do menu para telas maiores, alinhando-o ao topo do header */
+    }
+
+    .navegation-menu label {
+        /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 768 pixels */
+        display: none;
+        /* Isso oculta o ícone do menu para telas maiores, já que o menu será exibido diretamente no header */
+    }
+
+    .navegation-menu nav {
+        /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 768 pixels */
+        display: block;
+        /* Isso exibe o menu diretamente no header para telas maiores */
+    }
+
+    .navegation-menu ul {
+        /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 768 pixels */
+        display: flex;
+        /* Isso exibe os itens do menu lado a lado para telas maiores */
+        justify-content: space-between;
+        /* Isso distribui os itens do menu com espaçamento entre eles para telas maiores */
+        align-items: center;
+        /* Isso alinha os itens do menu ao centro para telas maiores */
+        padding: 0;
+        /* Isso remove o padding dos itens do menu para telas maiores */
+        width: 467px;
+        /* Isso define a largura do menu para telas maiores, garantindo que ele se encaixe adequadamente no header */
+    }
+
+    .navegation-menu li{
+        margin: 0;
+    }
+
 }
