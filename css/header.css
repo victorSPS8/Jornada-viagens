@@ -1,10 +1,22 @@
 header {
-  width: 100%;
-  /* Usamos a propriedade width com valor 100% para que o header ocupe toda a largura do container */
-  height: 138px;
-  /* Já que os três headers tem a mesma altura, podemos usar a propriedade height com tamnho fixo (px) */
+  /* usando display: flex; ele já faz esse cálculo de largura automaticamente, então não precisamos usar a propriedade width nem height. O header se ajustará automaticamente para ocupar toda a largura disponível do container pai. */
+    /* width: 100%; */
+    /* Usamos a propriedade width com valor 100% para que o header ocupe toda a largura do container */
+    /* height: 138px; */
+    /* Já que os três headers tem a mesma altura, podemos usar a propriedade height com tamnho fixo (px) */
   background-color: var(--background-tertiary-color);
   /* Usamos a variável de cor de fundo terciária para o background do header */
+  display: flex;
+  /* Usamos a propriedade display com valor flex para criar um layout flexível e alinhar os itens dentro do header */
+  flex-direction: row;
+  /* Precisamos definir o espaçamento e o alinhamento entre eles. Utilizaremos a propriedade flex-direction para especificar a direção dos elementos filhos, podendo ser em linhas ou colunas. No nosso caso, usaremos row para que o header se comporte como uma linha. */
+  justify-content: space-between;
+  /* Além disso, usaremos a propriedade justify-content para alinhar os elementos. Podemos centralizá-los com center, alinhá-los à direita com end ou flex-end, ou à esquerda com flex-start ou left. Outras opções incluem space-around, que distribui os elementos com espaçamento entre eles, e space-between, que coloca um espaço entre os elementos, posicionando-os nas extremidades. No nosso caso, utilizaremos space-between para garantir que cada elemento fique em um lado do menu.*/
+  align-items: flex-start;
+  /* Agora, precisamos centralizar a imagem. Para isso, utilizaremos a propriedade align-items no header, que nos oferece opções de alinhamento acima, abaixo ou ao centro. No nosso caso, queremos deixar como flex-start, começando do início. */
+  padding: 38px 48px;
+  /* No Figma, a altura natural do padding já está definida como 37 pixels. Vamos aplicar esse padding no header, com 37 pixels em 
+  cima e embaixo, e 48 pixels nas laterais, considerando o logo e o menu. */
 }
 
 .logo {
@@ -12,5 +24,13 @@ header {
   /* por ser uma tag Inline, usamos a propriedade display com valor inline-block */
   width: 68px;
   height: 64px;
-  margin: 37px 0 0 48px;
+}
+
+.navegation-menu {
+  margin-top: 24px;
+    /* Para alinhar o menu, usaremos a propriedade margin-top para criar um espaço entre o topo do header e o menu. No Figma, esse espaço é de 16 pixels, mas aplicaremos 24 pixels, porque 24 pixels ficou melhor . */
+}
+
+nav {
+  display: none;
 }
