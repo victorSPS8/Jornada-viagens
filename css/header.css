@@ -31,6 +31,10 @@ header {
     /* Para alinhar o menu, usaremos a propriedade margin-top para criar um espaço entre o topo do header e o menu. No Figma, esse espaço é de 16 pixels, mas aplicaremos 24 pixels, porque 24 pixels ficou melhor . */
 }
 
+input[type="checkbox"]:checked ~ nav {
+    display: block; 
+}
+
 nav {
   display: none;
 }
