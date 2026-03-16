@@ -17,13 +17,17 @@ header {
   padding: 38px 48px;
   /* No Figma, a altura natural do padding já está definida como 37 pixels. Vamos aplicar esse padding no header, com 37 pixels em 
   cima e embaixo, e 48 pixels nas laterais, considerando o logo e o menu. */
+  position: relative;
+    /* Para criar o menu suspenso, precisamos usar a propriedade position com valor relative no header, para que o menu seja   posicionado em relação a ele. */
 }
 
 .logo {
   display: inline-block;
   /* por ser uma tag Inline, usamos a propriedade display com valor inline-block */
   width: 68px;
+  /* Essa propriedade define a largura da imagem */
   height: 64px;
+    /* Essa propriedade define a altura da imagem */
 }
 
 .navegation-menu {
@@ -33,8 +37,39 @@ header {
 
 input[type="checkbox"]:checked ~ nav {
     display: block; 
+    /* Essa propriedade faz com que o menu seja exibido quando a checkbox for marcada */
+    position: absolute;
+    /* Essa propriedade permite posicionar o menu em relação ao header */
+    top: 100%;
+    /* Essa propriedade define a posição do menu em relação ao header */
+    left: 0;
+    /* Essa propriedade define a posição do menu em relação ao header */
+    width: 100%;
+    /* Essa propriedade faz com que o menu ocupe a % definida para a largura do header */
+    background-color: var(--background-tertiary-color);
+    /* Essa propriedade define a cor de fundo do menu usando a variável de cor de fundo terciária */
 }
 
 nav {
   display: none;
+    /* Essa propriedade oculta o menu por padrão */
+    
+}
+
+.list-links{
+    list-style: none;
+    /* Essa propriedade remove os marcadores da lista */
+}
+
+.list-links li{
+    margin: 16px;
+    /* Essa propriedade adiciona um espaço entre os itens do menu */
+}
+
+.list-links li a{
+    /* lê-se: vou entrar na ul, li e a */
+    color: var(--text-secondary-color);
+    /* Essa propriedade define a cor do texto dos itens do menu usando a variável de cor de texto secundária */
+    text-decoration: none;
+    /* Essa propriedade remove o sublinhado dos links */
 }
