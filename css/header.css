@@ -30,6 +30,16 @@ header {
     /* Essa propriedade define a altura da imagem */
 }
 
+.logo-mobile{
+    display: block;
+    /* por ser uma tag Inline, usamos a propriedade display com valor block para exibir a imagem mobile em telas menores */
+}
+
+.logo-desktop{
+    display: none;
+    /* por ser uma tag Inline, usamos a propriedade display com valor none para ocultar a imagem desktop em telas menores */
+}
+
 .navegation-menu {
   margin-top: 24px;
     /* Para alinhar o menu, usaremos a propriedade margin-top para criar um espaço entre o topo do header e o menu. No Figma, esse espaço é de 16 pixels, mas aplicaremos 24 pixels, porque 24 pixels ficou melhor . */
@@ -113,4 +123,43 @@ nav {
         margin: 0;
     }
 
+}
+
+@media screen and (min-width: 1024px) {
+
+    header{
+        padding: 38px 120px;
+        /* No Figma, a altura natural do padding já está definida como 37 pixels. Vamos aplicar esse padding no header, com 37 pixels em cima e embaixo, e 120 pixels nas laterais, para acompanhar a tela maior. */
+    }
+
+    .logo{
+        width: 260px;
+        /* Essa propriedade define a largura da imagem para telas maiores */
+        height: 64px;
+        /* Essa propriedade define a altura da imagem para telas maiores */
+    }
+
+    /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 1024 pixels */ 
+    .img-desktop{
+        display: block;
+        /* por ser uma tag Inline, usamos a propriedade display com valor block para exibir a imagem desktop em telas maiores */
+    }
+    .img-mobile{
+        display: none;
+            /* por ser uma tag Inline, usamos a propriedade display com valor none para ocultar a imagem mobile em telas maiores */
+    }    
+    
+    .navegation-menu a:hover{
+        color: var(--primary-color);
+        /* Essa propriedade define a cor do texto dos itens do menu usando a variável de cor primária quando o mouse estiver sobre eles */
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+    header{
+        padding: 38px 160px;
+        /* No Figma, a altura natural do padding já está definida como 37 pixels. Vamos aplicar esse padding no header, com 37 pixels em cima e embaixo, e 160 pixels nas laterais, para acompanhar a tela maior. */
+    }
+    
 }
