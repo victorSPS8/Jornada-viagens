@@ -3,10 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="../favicon.png" />
     <title>Jornada Viagens</title>
   </head>
   <body>
-    <h1></h1>
+    <header>
+      <a class="logo" title="Voltar para a página inicial">
+        <img
+          class="img-mobile"
+          src="img/busola-jornada-branca.png"
+          alt="Busola logo Jornada Viagens na cor branca"
+        />
+        <img
+          class="img-desktop"
+          src="img/busola-texto-jornada-branca.png"
+          alt="Logo Jornada Viagens na cor branca"
+        />
+      </a>
+      <div class="navegation-menu">
+        <!-- Usamos a div tanto para englobar a imagem hamburger do menu quanto a lista de links-->
+        <label for="menu">
+          <img src="img/menu.png" alt="Menu hamburger" />
+        </label>
+        <input type="checkbox" id="menu" hidden />
+        <!-- coloquei o input type="checkbox" id="menu" para a lista do menu só aparecer quando a checkbox for marcada. O hidden esconde o quadradinho do checkbox -->
+        <nav>
+          <!-- define uma seção semântica destinada a grupos de links de navegação, como menus principais, sumários ou barras de navegação -->
+          <ul class="list-links">
+            <!-- Isso faz as tag ancoras (a) ficarem em lista (uma encima da outra).  -->
+            <li>
+              <a href="blog.html" target="_blank" title="Acessar blog">Blog</a>
+            </li>
+            <li>
+              <a
+                href="pacotes.html"
+                target="_blank"
+                title="Acessar pacotes de viagem"
+                >Pacote de Viagens</a
+              >
+            </li>
+            <li>
+              <a href="contatos.html" target="_blank" title="Acessar contatos"
+                >Contatos</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   </body>
 </html>

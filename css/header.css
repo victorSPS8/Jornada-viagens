@@ -1,0 +1,165 @@
+header {
+  /* usando display: flex; ele já faz esse cálculo de largura automaticamente, então não precisamos usar a propriedade width nem height. O header se ajustará automaticamente para ocupar toda a largura disponível do container pai. */
+    /* width: 100%; */
+    /* Usamos a propriedade width com valor 100% para que o header ocupe toda a largura do container */
+    /* height: 138px; */
+    /* Já que os três headers tem a mesma altura, podemos usar a propriedade height com tamnho fixo (px) */
+  background-color: var(--background-tertiary-color);
+  /* Usamos a variável de cor de fundo terciária para o background do header */
+  display: flex;
+  /* Usamos a propriedade display com valor flex para criar um layout flexível e alinhar os itens dentro do header */
+  flex-direction: row;
+  /* Precisamos definir o espaçamento e o alinhamento entre eles. Utilizaremos a propriedade flex-direction para especificar a direção dos elementos filhos, podendo ser em linhas ou colunas. No nosso caso, usaremos row para que o header se comporte como uma linha. */
+  justify-content: space-between;
+  /* Além disso, usaremos a propriedade justify-content para alinhar os elementos. Podemos centralizá-los com center, alinhá-los à direita com end ou flex-end, ou à esquerda com flex-start ou left. Outras opções incluem space-around, que distribui os elementos com espaçamento entre eles, e space-between, que coloca um espaço entre os elementos, posicionando-os nas extremidades. No nosso caso, utilizaremos space-between para garantir que cada elemento fique em um lado do menu.*/
+  align-items: flex-start;
+  /* Agora, precisamos centralizar a imagem. Para isso, utilizaremos a propriedade align-items no header, que nos oferece opções de alinhamento acima, abaixo ou ao centro. No nosso caso, queremos deixar como flex-start, começando do início. */
+  padding: 38px 48px;
+  /* No Figma, a altura natural do padding já está definida como 37 pixels. Vamos aplicar esse padding no header, com 37 pixels em 
+  cima e embaixo, e 48 pixels nas laterais, considerando o logo e o menu. */
+  position: relative;
+    /* Para criar o menu suspenso, precisamos usar a propriedade position com valor relative no header, para que o menu seja   posicionado em relação a ele. */
+}
+
+.logo {
+  display: inline-block;
+  /* por ser uma tag Inline, usamos a propriedade display com valor inline-block */
+  width: 68px;
+  /* Essa propriedade define a largura da imagem */
+  height: 64px;
+    /* Essa propriedade define a altura da imagem */
+}
+
+.logo-mobile{
+    display: block;
+    /* por ser uma tag Inline, usamos a propriedade display com valor block para exibir a imagem mobile em telas menores */
+}
+
+.logo-desktop{
+    display: none;
+    /* por ser uma tag Inline, usamos a propriedade display com valor none para ocultar a imagem desktop em telas menores */
+}
+
+.navegation-menu {
+  margin-top: 24px;
+    /* Para alinhar o menu, usaremos a propriedade margin-top para criar um espaço entre o topo do header e o menu. No Figma, esse espaço é de 16 pixels, mas aplicaremos 24 pixels, porque 24 pixels ficou melhor . */
+}
+
+input[type="checkbox"]:checked ~ nav {
+    display: block; 
+    /* Essa propriedade faz com que o menu seja exibido quando a checkbox for marcada */
+    position: absolute;
+    /* Essa propriedade permite posicionar o menu em relação ao header */
+    top: 100%;
+    /* Essa propriedade define a posição do menu em relação ao header */
+    left: 0;
+    /* Essa propriedade define a posição do menu em relação ao header */
+    width: 100%;
+    /* Essa propriedade faz com que o menu ocupe a % definida para a largura do header */
+    background-color: var(--background-tertiary-color);
+    /* Essa propriedade define a cor de fundo do menu usando a variável de cor de fundo terciária */
+}
+
+nav {
+  display: none;
+    /* Essa propriedade oculta o menu por padrão */
+    
+}
+
+.list-links{
+    list-style: none;
+    /* Essa propriedade remove os marcadores da lista */
+}
+
+.list-links li{
+    margin: 16px;
+    /* Essa propriedade adiciona um espaço entre os itens do menu */
+}
+
+.list-links li a{
+    /* lê-se: vou entrar na ul, li e a */
+    color: var(--text-secondary-color);
+    /* Essa propriedade define a cor do texto dos itens do menu usando a variável de cor de texto secundária */
+    text-decoration: none;
+    /* Essa propriedade remove o sublinhado dos links */
+    font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 768 pixels */
+    .navegation-menu {
+        /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 768 pixels */
+        margin-top: 0;
+        /* Isso remove a margem superior do menu para telas maiores, alinhando-o ao topo do header */
+    }
+
+    .navegation-menu label {
+        /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 768 pixels */
+        display: none;
+        /* Isso oculta o ícone do menu para telas maiores, já que o menu será exibido diretamente no header */
+    }
+
+    .navegation-menu nav {
+        /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 768 pixels */
+        display: block;
+        /* Isso exibe o menu diretamente no header para telas maiores */
+    }
+
+    .navegation-menu ul {
+        /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 768 pixels */
+        display: flex;
+        /* Isso exibe os itens do menu lado a lado para telas maiores */
+        justify-content: space-between;
+        /* Isso distribui os itens do menu com espaçamento entre eles para telas maiores */
+        align-items: center;
+        /* Isso alinha os itens do menu ao centro para telas maiores */
+        padding: 0;
+        /* Isso remove o padding dos itens do menu para telas maiores */
+        width: 467px;
+        /* Isso define a largura do menu para telas maiores, garantindo que ele se encaixe adequadamente no header */
+    }
+
+    .navegation-menu li{
+        margin: 0;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    header{
+        padding: 38px 120px;
+        /* No Figma, a altura natural do padding já está definida como 37 pixels. Vamos aplicar esse padding no header, com 37 pixels em cima e embaixo, e 120 pixels nas laterais, para acompanhar a tela maior. */
+    }
+
+    .logo{
+        width: 260px;
+        /* Essa propriedade define a largura da imagem para telas maiores */
+        height: 64px;
+        /* Essa propriedade define a altura da imagem para telas maiores */
+    }
+
+    /* Isso define estilos específicos para diferentes telas de visualização. Nesse caso, os estilos serão aplicados quando a largura da tela for menor ou igual a 1024 pixels */ 
+    .img-desktop{
+        display: block;
+        /* por ser uma tag Inline, usamos a propriedade display com valor block para exibir a imagem desktop em telas maiores */
+    }
+    .img-mobile{
+        display: none;
+            /* por ser uma tag Inline, usamos a propriedade display com valor none para ocultar a imagem mobile em telas maiores */
+    }    
+    
+    .navegation-menu a:hover{
+        color: var(--primary-color);
+        /* Essa propriedade define a cor do texto dos itens do menu usando a variável de cor primária quando o mouse estiver sobre eles */
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+    header{
+        padding: 38px 160px;
+        /* No Figma, a altura natural do padding já está definida como 37 pixels. Vamos aplicar esse padding no header, com 37 pixels em cima e embaixo, e 160 pixels nas laterais, para acompanhar a tela maior. */
+    }
+    
+}
