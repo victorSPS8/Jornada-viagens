@@ -30,12 +30,12 @@ header {
     /* Essa propriedade define a altura da imagem */
 }
 
-.logo-mobile{
+.img-mobile{
     display: block;
     /* por ser uma tag Inline, usamos a propriedade display com valor block para exibir a imagem mobile em telas menores */
 }
 
-.logo-desktop{
+.img-desktop{
     display: none;
     /* por ser uma tag Inline, usamos a propriedade display com valor none para ocultar a imagem desktop em telas menores */
 }
