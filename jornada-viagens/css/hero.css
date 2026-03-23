@@ -86,6 +86,7 @@
   font-size: 1.6;
   /* font-size é usado para definir o tamanho da fonte. Neste caso, o valor "1.6" significa que o tamanho da fonte será 1.6 vezes o tamanho padrão. */
 }
+}
 
 @media screen and (min-width: 1920px) {
   /* Estilos para tela com largura mínima de 1920px */
