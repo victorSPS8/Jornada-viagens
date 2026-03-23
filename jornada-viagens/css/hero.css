@@ -1,0 +1,113 @@
+.hero-img {
+  height: 400px;
+  /* Altura da imagem  */
+  width: 100%;
+  /* Largura da imagem  */
+  background-image: url("../img/hero-mobile.jpg");
+  /* Essa propriedade define a imagem de fundo usando a URL relativa para a imagem desktop */
+  /* Também tenho a opção de usar "background: url("../img/hero-desktop.png") no-repeat;" e não escrevo background-repeat: no-repeat;  Isso faz economizar espaço e codigo mais limpo */
+  background-repeat: no-repeat;
+  /* Impede que a imagem se repita */
+  background-size: cover;
+  /* Faz com que a imagem cubra toda a área disponível, mantendo sua proporção */
+  background-position: center;
+  /* Centraliza a imagem dentro do elemento */
+}
+
+.hero h2 {
+  /* O h2 é o título da seção, e o texto dentro dele é a descrição da agência de viagens. */
+  padding: 88px 24px;
+  /* O padding é usado para criar espaço interno ao redor do conteúdo do elemento. Neste caso, o valor "88px 24px" significa que haverá um espaçamento de 88 pixels na parte superior e inferior, e 24 pixels nas laterais (esquerda e direita) do elemento h2 dentro da classe hero. */
+  margin: 0px;
+  /* O margin é usado para criar espaço externo ao redor do elemento. Neste caso, o valor "0px" significa que não haverá nenhum espaçamento externo ao redor do elemento h2 dentro da classe hero. */
+  font-weight: var(--text-weight);
+  /* Essa propriedade define a espessura da fonte usando a variável --text-weight, que foi definida anteriormente no arquivo global.css. */
+  font-size: 20px;
+  /* Essa propriedade define o tamanho da fonte para 20 pixels. */
+  line-height: 1.6;
+  /* Essa propriedade define a altura da linha para 1.6 vezes o tamanho da fonte, o que ajuda a melhorar a legibilidade do texto. */
+  text-align: center;
+  /* Alinha o texto ao centro do elemento */
+}
+
+@media screen and (min-width: 768px) {
+  /* Estilos para tela com largura mínima de 768px */
+  .hero-img {
+    /* Estilos para tela com largura mínima de 768px */
+    height: 620px;
+    /* Altura da imagem  */
+    background-image: url("../img/hero-tablet.jpg");
+    /* Essa propriedade define a imagem de fundo usando a URL relativa para a imagem desktop */
+    /* Também tenho a opção de usar "background: url("../img/hero-desktop.png") no-repeat;" e não escrevo background-repeat: no-repeat;  Isso faz economizar espaço e codigo mais limpo */
+    background-repeat: no-repeat;
+    /* Impede que a imagem se repita */
+    background-size: cover;
+    /* Faz com que a imagem cubra toda a área disponível, mantendo sua proporção */
+    background-position: center;
+    /* Centraliza a imagem dentro do elemento */
+  }
+
+  .hero h2 {
+    /* Estilos para tela com largura mínima de 768px */
+  padding: 88px 60px;
+  /* O padding é usado para criar espaço interno ao redor do conteúdo do elemento. Neste caso, o valor "88px 60px" significa que haverá um espaçamento de 88 pixels na parte superior e inferior, e 60 pixels nas laterais (esquerda e direita) do elemento h2 dentro da classe hero. */
+  margin: 0px;
+  /* O margin é usado para criar espaço externo ao redor do elemento. Neste caso, o valor "0px" significa que não haverá nenhum espaçamento externo ao redor do elemento h2 dentro da classe hero. */
+  font-weight: var(--text-weight); 
+  /* Essa propriedade define a espessura da fonte usando a variável --text-weight, que foi definida anteriormente no arquivo global.css. */
+  /*essa propriedade é herdada do mobile, então não preciso repetir ela aqui, mas como é uma boa prática de css, eu deixo ela aqui para garantir que o estilo seja aplicado corretamente. */ 
+  font-size: 32px;
+  /* Essa propriedade define o tamanho da fonte para 32 pixels. */
+  /* Essa propriedade é herdada do mobile, então não preciso repetir ela aqui, mas como é uma boa prática de css, eu deixo ela aqui para garantir que o estilo seja aplicado corretamente. */ 
+}
+}
+
+@media screen and (min-width: 1024px) {
+  /* Estilos para tela com largura mínima de 1024px */
+  .hero-img {
+    /* Estilos para tela com largura mínima de 1024px */
+    height: 620px;
+    /* Altura da imagem.  Por ser o mesmo tamanho do tablet ele pode ser herdado. */
+    background-image: url("../img/hero-desktop.jpg");
+    /* Essa propriedade define a imagem de fundo usando a URL relativa para a imagem desktop */
+    /* Também tenho a opção de usar "background: url("../img/hero-desktop.png") no-repeat;" e não escrevo background-repeat: no-repeat;  Isso faz economizar espaço e codigo mais limpo */
+    background-repeat: no-repeat;
+    /* Impede que a imagem se repita */
+    background-size: cover;
+    /* Faz com que a imagem cubra toda a área disponível, mantendo sua proporção */
+    background-position: center;
+    /* Centraliza a imagem dentro do elemento */
+  }
+
+  .hero h2 {
+    /* Estilos para tela com largura mínima de 1024px */
+  padding: 88px 120px;
+  /* O padding é usado para criar espaço interno ao redor do conteúdo do elemento. Neste caso, o valor "88px 120px" significa que haverá um espaçamento de 88 pixels na parte superior e inferior, e 120 pixels nas laterais (esquerda e direita) do elemento h2 dentro da classe hero. */
+  font-size: 1.6;
+  /* font-size é usado para definir o tamanho da fonte. Neste caso, o valor "1.6" significa que o tamanho da fonte será 1.6 vezes o tamanho padrão. */
+}
+
+@media screen and (min-width: 1920px) {
+  /* Estilos para tela com largura mínima de 1920px */
+  .hero-img {
+    height: 620px;
+    /* Altura da imagem.  Por ser o mesmo tamanho do tablet ele pode ser herdado. */
+    background-image: url("../img/hero-desktop.jpg");
+    /* Essa propriedade define a imagem de fundo usando a URL relativa para a imagem desktop */
+    /* Também tenho a opção de usar "background: url("../img/hero-desktop.png") no-repeat;" e não escrevo background-repeat: no-repeat;  Isso faz economizar espaço e codigo mais limpo */
+    background-repeat: no-repeat;
+    /* Impede que a imagem se repita */
+    background-size: cover;
+    /* Faz com que a imagem cubra toda a área disponível, mantendo sua proporção */
+    background-position: center;
+    /* Centraliza a imagem dentro do elemento */
+  }
+
+  .hero h2 {
+    /* Estilos para tela com largura mínima de 1920px */
+  padding: 88px 160px;
+  /* O padding é usado para criar espaço interno ao redor do conteúdo do elemento. Neste caso, o valor "88px 160px" significa que haverá um espaçamento de 88 pixels na parte superior e inferior, e 160 pixels nas laterais (esquerda e direita) do elemento h2 dentro da classe hero. */
+  font-size: 1.6;
+  /* font-size é usado para definir o tamanho da fonte. Neste caso, o valor "1.6" significa que o tamanho da fonte será 1.6 vezes o tamanho padrão. */
+}
+}
